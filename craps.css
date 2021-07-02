@@ -1,0 +1,19 @@
+.container1 {
+    padding: 25px 50px;
+}
+body {
+    background-color: rgb(39, 204, 88);
+}
+.row {
+    padding-top: 50px;
+}
+
+.numberButton {
+    width: 100px;
+    height: 50px;
+}
+
+.chipsRow {
+    border: none;
+    background-color: transparent;
+}

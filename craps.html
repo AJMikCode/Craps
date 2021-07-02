@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="craps.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="craps.css">
+
+    <title>Craps Game</title>
+</head>
+
+<body>
+
+    <div class="container1">
+        <div class="row">
+            <div class="col-2">
+                <div id="numberFour" >Amount Bet on 4</div>
+                <button onclick="placeBet('numberFour')" class="numberButton">4</button>
+            </div>
+            <div class="col-2">
+                <div id="numberFive" >Amount Bet on 5</div>
+                <button onclick="placeBet('numberFive')" class="numberButton">5</button>
+            </div>
+            <div class="col-2">
+                <div id="numberSix" >Amount Bet on 6</div>
+                <button onclick="placeBet('numberSix')" class="numberButton">6</button>
+            </div>
+            <div class="col-2">
+                <div id="numberEight" >Amount Bet on 8</div>
+                <button onclick="placeBet('numberEight')" class="numberButton">8</button>
+            </div>
+            <div class="col-2">
+                <div id="numberNine" >Amount Bet on 9</div>
+                <button onclick="placeBet('numberNine')" class="numberButton">9</button>
+            </div>
+            <div class="col-2">
+                <div id="numberTen" >Amount Bet on 10</div>
+                <button onclick="placeBet('numberTen')" class="numberButton">10</button>
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <button class="numberButton">COME</button>
+            </div>
+            <div class="col-2">
+                <table class="table table-bordered table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                <div id="hardFour">Amount Bet on Hard 4</div>
+                                <button onclick="placeBet('hardFour')">Hard 4<img src="" alt=""><img src="" alt=""></button>
+                            </th>
+                            <th scope="col">
+                                <div id="hardTen">Amount Bet on Hard 10</div>
+                                <button onclick="placeBet('hardTen')">Hard 10<img src="" alt=""><img src="" alt=""></button>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div id="hardSix">Amount Bet on Hard 6</div>
+                                <button onclick="placeBet('hardSix')">Hard 6<img src="" alt=""><img src="" alt=""></button>
+                            </td>
+                            <td>
+                                <div id="hardEight">Amount Bet on Hard 8</div>
+                                <button onclick="placeBet('hardEight')">Hard 8<img src="" alt=""><img src="" alt=""></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="numberThree">Amount Bet on 3</div>
+                                <button onclick="placeBet('numberThree')">1 + 2<img src="" alt=""><img src="" alt=""></button>
+                        </td>
+                        <td>
+                            <div id="numberEleven">Amount Bet on 11</div>
+                            <button onclick="placeBet('numberEleven')">11<img src="" alt=""><img src="" alt=""></button>
+                    </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="numberTwo">Amount Bet on 2</div>
+                                <button onclick="placeBet('numberTwo')">1 + 1<img src="" alt=""><img src="" alt=""></button>
+                            </td>
+                            <td>
+                                <div id="numberTwelve">Amount Bet on 12</div>
+                                <button onclick="placeBet('numberTwelve')">6 + 6<img src="" alt=""><img src="" alt=""></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-12">
+                <button>Field</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <button>Pass Line</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <p>Wallet: </p>
+                <div id="walletAmt">walletAmt</div>
+            </div>
+            <div class="col-4">
+                <p>Player Bet Amount:</p>
+                <div id="playerBetAmt">playerBetAmt</div>
+            </div>
+            <div class="col-4">
+                <button id="plusButton" class="numberButton">+</button>
+                <button id="minusButton" class="numberButton">-</button>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-2">
+                <button class="chipsRow" id="chip1" onclick="setBet(chip1)"><img src="./Chip images/Chip-1.png" alt=""></button>
+            </div>
+            <div class="col-2">
+                <button id="chip5" class="chipsRow" onclick="setBet(chip5)"><img src="./Chip images/Chip-5.png" alt=""></button>
+            </div>
+            <div class="col-2">
+                <button id="chip25" class="chipsRow" onclick="setBet(chip25)"><img src="./Chip images/Chip-25.png" alt=""></button>
+            </div>
+            <div class="col-2">
+                <button id="chip100" class="chipsRow" onclick="setBet(chip100)"><img src="./Chip images/Chip-100.png" alt=""></button>
+            </div>
+            <div class="col-2">
+                <button id="chip500" class="chipsRow" onclick="setBet(chip500)"><img src="./Chip images/Chip-500.png" alt=""></button>
+            </div>
+            <div class="col-2">
+                <button id="chip1000" class="chipsRow" onclick="setBet(chip1000)"><img src="./Chip images/Chip-1000.png" alt=""></button>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
