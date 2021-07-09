@@ -19,45 +19,57 @@
     <div class="container1">
         <div class="row">
             <div class="col-2">
-                <div id="numberFour" >Amount Bet on 4</div>
+                <div id="numberFour" onclick="typeBet(this.id)">Amount Bet on 4</div>
                 <button onclick="placeBet('numberFour')" class="numberButton">4</button>
             </div>
             <div class="col-2">
-                <div id="numberFive" >Amount Bet on 5</div>
+                <div id="numberFive" onclick="typeBet(this.id)" >Amount Bet on 5</div>
                 <button onclick="placeBet('numberFive')" class="numberButton">5</button>
             </div>
             <div class="col-2">
-                <div id="numberSix" >Amount Bet on 6</div>
+                <div id="numberSix" onclick="typeBet(this.id)">Amount Bet on 6</div>
                 <button onclick="placeBet('numberSix')" class="numberButton">6</button>
             </div>
             <div class="col-2">
-                <div id="numberEight" >Amount Bet on 8</div>
+                <div id="numberEight" onclick="typeBet(this.id)">Amount Bet on 8</div>
                 <button onclick="placeBet('numberEight')" class="numberButton">8</button>
             </div>
             <div class="col-2">
-                <div id="numberNine" >Amount Bet on 9</div>
+                <div id="numberNine" onclick="typeBet(this.id)">Amount Bet on 9</div>
                 <button onclick="placeBet('numberNine')" class="numberButton">9</button>
             </div>
             <div class="col-2">
-                <div id="numberTen" >Amount Bet on 10</div>
+                <div id="numberTen" onclick="typeBet(this.id)">Amount Bet on 10</div>
                 <button onclick="placeBet('numberTen')" class="numberButton">10</button>
             </div>
             <div class="col"></div>
         </div>
         <div class="row">
-            <div class="col-10">
+            <div class="col-4">
                 <button class="numberButton">COME</button>
+                <br><br>
+                <button>Field</button>
+                <br><br> 
+                <p id="passLineAmt">Amount Bet on Pass Line</p>
+                <button id="passLineBtn" onclick="placeBet('passLineAmt')">Pass Line</button>                
             </div>
-            <div class="col-2">
+
+            <div class="col-4">
+                <img class="RollingDiceImages" id="img1" src="Dice images/Dice-6.png" alt="">
+                <img class="RollingDiceImages" id="img2" src="Dice images/Dice-3.png" alt="">
+                <button class="numberButton" id="rollDice" onclick="generateDice(); calculatePayout();">Roll Dice</button>
+            </div>
+
+            <div class="col-4">
                 <table class="table table-bordered table-dark">
                     <thead>
                         <tr>
                             <th scope="col">
-                                <div id="hardFour">Amount Bet on Hard 4</div>
+                                <div id="hardFour" onclick="typeBet(this.id)">Amount Bet on Hard 4</div>
                                 <button onclick="placeBet('hardFour')">Hard 4<img src="" alt=""><img src="" alt=""></button>
                             </th>
                             <th scope="col">
-                                <div id="hardTen">Amount Bet on Hard 10</div>
+                                <div id="hardTen" onclick="typeBet(this.id)">Amount Bet on Hard 10</div>
                                 <button onclick="placeBet('hardTen')">Hard 10<img src="" alt=""><img src="" alt=""></button>
                             </th>
                         </tr>
@@ -65,50 +77,37 @@
                     <tbody>
                         <tr>
                             <td>
-                                <div id="hardSix">Amount Bet on Hard 6</div>
+                                <div id="hardSix" onclick="typeBet(this.id)">Amount Bet on Hard 6</div>
                                 <button onclick="placeBet('hardSix')">Hard 6<img src="" alt=""><img src="" alt=""></button>
                             </td>
                             <td>
-                                <div id="hardEight">Amount Bet on Hard 8</div>
+                                <div id="hardEight" onclick="typeBet(this.id)">Amount Bet on Hard 8</div>
                                 <button onclick="placeBet('hardEight')">Hard 8<img src="" alt=""><img src="" alt=""></button>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <div id="numberThree">Amount Bet on 3</div>
+                                <div id="numberThree" onclick="typeBet(this.id)">Amount Bet on 3</div>
                                 <button onclick="placeBet('numberThree')">1 + 2<img src="" alt=""><img src="" alt=""></button>
                         </td>
                         <td>
-                            <div id="numberEleven">Amount Bet on 11</div>
+                            <div id="numberEleven" onclick="typeBet(this.id)">Amount Bet on 11</div>
                             <button onclick="placeBet('numberEleven')">11<img src="" alt=""><img src="" alt=""></button>
                     </td>
                         </tr>
                         <tr>
                             <td>
-                                <div id="numberTwo">Amount Bet on 2</div>
+                                <div id="numberTwo" onclick="typeBet(this.id)">Amount Bet on 2</div>
                                 <button onclick="placeBet('numberTwo')">1 + 1<img src="" alt=""><img src="" alt=""></button>
                             </td>
                             <td>
-                                <div id="numberTwelve">Amount Bet on 12</div>
+                                <div id="numberTwelve" onclick="typeBet(this.id)">Amount Bet on 12</div>
                                 <button onclick="placeBet('numberTwelve')">6 + 6<img src="" alt=""><img src="" alt=""></button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-12">
-                <button>Field</button>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12">
-                <button>Pass Line</button>
-            </div>
+                </div>
         </div>
 
         <div class="row">
