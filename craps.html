@@ -20,27 +20,27 @@
         <div class="row">
             <div class="col-2">
                 <div id="numberFour" onclick="typeBet(this.id)">Amount Bet on 4</div>
-                <button onclick="placeBet('numberFour')" class="numberButton">4</button>
+                <button onclick="placeBet('numberFour')" class="numberButton" id="betOnnumberFour">4</button>
             </div>
             <div class="col-2">
                 <div id="numberFive" onclick="typeBet(this.id)" >Amount Bet on 5</div>
-                <button onclick="placeBet('numberFive')" class="numberButton">5</button>
+                <button onclick="placeBet('numberFive')" class="numberButton" id="betOnnumberFive">5</button>
             </div>
             <div class="col-2">
                 <div id="numberSix" onclick="typeBet(this.id)">Amount Bet on 6</div>
-                <button onclick="placeBet('numberSix')" class="numberButton">6</button>
+                <button onclick="placeBet('numberSix')" class="numberButton" id="betOnnumberSix">6</button>
             </div>
             <div class="col-2">
                 <div id="numberEight" onclick="typeBet(this.id)">Amount Bet on 8</div>
-                <button onclick="placeBet('numberEight')" class="numberButton">8</button>
+                <button onclick="placeBet('numberEight')" class="numberButton" id="betOnnumberEight">8</button>
             </div>
             <div class="col-2">
                 <div id="numberNine" onclick="typeBet(this.id)">Amount Bet on 9</div>
-                <button onclick="placeBet('numberNine')" class="numberButton">9</button>
+                <button onclick="placeBet('numberNine')" class="numberButton" id="betOnnumberNine">9</button>
             </div>
             <div class="col-2">
                 <div id="numberTen" onclick="typeBet(this.id)">Amount Bet on 10</div>
-                <button onclick="placeBet('numberTen')" class="numberButton">10</button>
+                <button onclick="placeBet('numberTen')" class="numberButton" id="betOnnumberTen">10</button>
             </div>
             <div class="col"></div>
         </div>
@@ -50,14 +50,16 @@
                 <br><br>
                 <button>Field</button>
                 <br><br> 
-                <p id="passLineAmt">Amount Bet on Pass Line</p>
+                <p id="passLineAmt" onclick="typeBet('passLineAmt')">Amount Bet on Pass Line</p>
                 <button id="passLineBtn" onclick="placeBet('passLineAmt')">Pass Line</button>                
             </div>
 
             <div class="col-4">
                 <img class="RollingDiceImages" id="img1" src="Dice images/Dice-6.png" alt="">
                 <img class="RollingDiceImages" id="img2" src="Dice images/Dice-3.png" alt="">
-                <button class="numberButton" id="rollDice" onclick="generateDice(); calculatePayout();">Roll Dice</button>
+                <button class="numberButton" id="rollDice" onclick="generateDice(); setNumber();">Roll Dice</button>
+                <br><br>
+                <img id="comeOutRollBtn" class="RollingDiceImages" src="Come Out Button images/off-button.png" alt="" >
             </div>
 
             <div class="col-4">
@@ -66,11 +68,11 @@
                         <tr>
                             <th scope="col">
                                 <div id="hardFour" onclick="typeBet(this.id)">Amount Bet on Hard 4</div>
-                                <button onclick="placeBet('hardFour')">Hard 4<img src="" alt=""><img src="" alt=""></button>
+                                <button onclick="placeBet('hardFour')" id="betOnhardFour">Hard 4<img src="" alt=""><img src="" alt=""></button>
                             </th>
                             <th scope="col">
                                 <div id="hardTen" onclick="typeBet(this.id)">Amount Bet on Hard 10</div>
-                                <button onclick="placeBet('hardTen')">Hard 10<img src="" alt=""><img src="" alt=""></button>
+                                <button onclick="placeBet('hardTen')" id="betOnhardTen">Hard 10<img src="" alt=""><img src="" alt=""></button>
                             </th>
                         </tr>
                     </thead>
@@ -78,11 +80,11 @@
                         <tr>
                             <td>
                                 <div id="hardSix" onclick="typeBet(this.id)">Amount Bet on Hard 6</div>
-                                <button onclick="placeBet('hardSix')">Hard 6<img src="" alt=""><img src="" alt=""></button>
+                                <button onclick="placeBet('hardSix')" id="betOnhardSix">Hard 6<img src="" alt=""><img src="" alt=""></button>
                             </td>
                             <td>
                                 <div id="hardEight" onclick="typeBet(this.id)">Amount Bet on Hard 8</div>
-                                <button onclick="placeBet('hardEight')">Hard 8<img src="" alt=""><img src="" alt=""></button>
+                                <button onclick="placeBet('hardEight')" id="betOnhardEight">Hard 8<img src="" alt=""><img src="" alt=""></button>
                             </td>
                         </tr>
                         <tr>
